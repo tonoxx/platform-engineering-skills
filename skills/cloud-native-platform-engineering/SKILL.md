@@ -1,7 +1,7 @@
 ---
 name: cloud-native-platform-engineering
 description: Guide for Platform Engineers (PfE) to design, build, and operate cloud-native platforms (OpenShift/AWS). Use this skill for Environment as a Service (DevContainer/MCP), Golden Path creation, Day 0/1/2 operations, CI/CD, Observability, and DevSecOps.
-license: Complete terms in LICENSE.txt
+license: MIT
 ---
 
 # Cloud Native Platform Engineering
