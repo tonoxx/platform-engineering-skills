@@ -45,6 +45,17 @@ Backstage プラグイン開発、TechDocs、Software Catalog Scorecard によ�
 #### [research-driven-skill-builder](skills/research-driven-skill-builder/SKILL.md)
 MECE 原則に基づくリサーチ駆動のスキル設計・作成ワークフロー。
 
+## Hands-on 演習
+
+以下のスキルには実践的なハンズオン演習が含まれています。
+
+| スキル | 演習数 | 対象環境 | 内容 |
+|--------|--------|----------|------|
+| [kubernetes-troubleshooting](skills/kubernetes-troubleshooting/hands-on/) | 5 | EKS / OpenShift | CrashLoopBackOff, ImagePullBackOff, NetworkPolicy, PVC Pending, ResourceQuota |
+| [iac-review-and-migration](skills/iac-review-and-migration/hands-on/) | 5 | AWS + Terraform | State Import, Blast Radius Review, Drift Detection, Provider Upgrade, State Surgery |
+
+各演習は独立して取り組めます。詳細は各 `hands-on/README.md` を参照してください。
+
 ## ディレクトリ構成
 
 ```
@@ -56,11 +67,13 @@ skills/
 ├── kubernetes-troubleshooting/
 │   ├── SKILL.md
 │   ├── references/    (3 files)
-│   └── templates/     (1 file)
+│   ├── templates/     (1 file)
+│   └── hands-on/     (5 exercises)
 ├── iac-review-and-migration/
 │   ├── SKILL.md
 │   ├── references/    (3 files)
-│   └── templates/     (1 file)
+│   ├── templates/     (1 file)
+│   └── hands-on/     (5 exercises)
 ├── observability-driven-development/
 │   ├── SKILL.md
 │   └── references/    (3 files)
