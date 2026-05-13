@@ -4,52 +4,90 @@ Claude Code 用のカスタムスキル集です。クラウドネイティブ�
 
 ## Skills
 
-### [cloud-native-platform-engineering](skills/cloud-native-platform-engineering/SKILL.md)
+### Platform Infrastructure
 
-Platform Engineer (PfE) 向けのクラウドネイティブプラットフォーム設計・構築・運用ガイドです。
+#### [cloud-native-platform-engineering](skills/cloud-native-platform-engineering/SKILL.md)
+クラウドネイティブプラットフォームの設計・構築・運用ガイド (Day 0/1/2)。
+対象: OpenShift, AWS, Kubernetes, Backstage, Terraform, Crossplane, Sigstore, SPIFFE/SPIRE
 
-- **Day 0**: IDP 設計、DevContainer / EaaS、MCP 統合、Golden Path
-- **Day 1**: CI/CD (Tekton / GitHub Actions)、GitOps (Argo CD)、IaC、DevSecOps
-- **Day 2**: SRE (SLO/SLI)、Observability (OpenTelemetry)、FinOps、AIOps
+#### [kubernetes-troubleshooting](skills/kubernetes-troubleshooting/SKILL.md)
+Kubernetes の障害診断・解決ワークフロー。Pod ライフサイクル障害、ネットワーク/DNS 問題、ストレージ・リソース枯渇。
 
-対象技術: OpenShift, AWS (EKS/ECR/AMP), Kubernetes, Backstage, Terraform, Crossplane, Sigstore, SPIFFE/SPIRE
+#### [iac-review-and-migration](skills/iac-review-and-migration/SKILL.md)
+IaC (Terraform/Crossplane/Pulumi) のコードレビュー、バージョンアップ、State 管理のベストプラクティス。
 
-### [research-driven-skill-builder](skills/research-driven-skill-builder/SKILL.md)
+### Observability & Reliability
 
-リサーチ駆動で高品質なスキルを設計・作成するためのワークフローガイドです。
+#### [observability-driven-development](skills/observability-driven-development/SKILL.md)
+アプリケーションコードへの OpenTelemetry 計装パターン、SLI 設計、構造化ログ規約。
 
-- MECE (Mutually Exclusive, Collectively Exhaustive) 原則に基づく構造設計
-- 並列リサーチ -> MECE 分類 -> 実装 -> 検証のステップ
-- スキル構造パターン (Lifecycle / Layered / Persona / Capability)
+#### [incident-command](skills/incident-command/SKILL.md)
+オンコール設計、Incident Commander ワークフロー、エスカレーション基準、ポストモーテム運営。
 
-## 使い方
+### Developer Experience
 
-Claude Code のスキルとしてインストールして使用します。
+#### [api-design-and-contract-testing](skills/api-design-and-contract-testing/SKILL.md)
+OpenAPI / gRPC スキーマ設計、Pact による Consumer-Driven Contract Testing、API バージョニング戦略。
 
-```bash
-claude skill install /path/to/skills/<skill-name>
-```
+#### [inner-source-developer-portal](skills/inner-source-developer-portal/SKILL.md)
+Backstage プラグイン開発、TechDocs、Software Catalog Scorecard による成熟度評価。
+
+### Organization & Strategy
+
+#### [finops-cost-engineering](skills/finops-cost-engineering/SKILL.md)
+クラウドコスト分析、Kubernetes コスト配賦、Reserved/Spot 最適化、FinOps ガバナンス。
+
+#### [platform-adoption-playbook](skills/platform-adoption-playbook/SKILL.md)
+プラットフォーム採用戦略、DORA メトリクス計測、Team Topologies の適用。
+
+### Meta
+
+#### [research-driven-skill-builder](skills/research-driven-skill-builder/SKILL.md)
+MECE 原則に基づくリサーチ駆動のスキル設計・作成ワークフロー。
 
 ## ディレクトリ構成
 
 ```
 skills/
 ├── cloud-native-platform-engineering/
-│   ├── SKILL.md                 # メインスキル定義 (ルーター)
-│   ├── references/
-│   │   ├── environment-as-a-service.md
-│   │   ├── release-engineering-and-security.md
-│   │   └── site-reliability-and-operations.md
-│   └── templates/
-│       ├── architecture_decision_record.md
-│       ├── postmortem.md
-│       └── slo_document.md
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (3 files)
+├── kubernetes-troubleshooting/
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (1 file)
+├── iac-review-and-migration/
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (1 file)
+├── observability-driven-development/
+│   ├── SKILL.md
+│   └── references/    (3 files)
+├── incident-command/
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (2 files)
+├── api-design-and-contract-testing/
+│   ├── SKILL.md
+│   └── references/    (3 files)
+├── inner-source-developer-portal/
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (1 file)
+├── finops-cost-engineering/
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (1 file)
+├── platform-adoption-playbook/
+│   ├── SKILL.md
+│   ├── references/    (3 files)
+│   └── templates/     (1 file)
 └── research-driven-skill-builder/
-    ├── SKILL.md                 # メインスキル定義
-    └── references/
-        └── mece-design-patterns.md
+    ├── SKILL.md
+    └── references/    (1 file)
 ```
 
 ## License
 
-See individual skill files for license information.
+MIT — See [LICENSE](LICENSE) for details.
